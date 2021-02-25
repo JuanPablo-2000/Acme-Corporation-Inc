@@ -13,10 +13,35 @@
     margin-left: 28%;   
 }
 
+#backgroundAuto {
+  background-image: url("../img/Corvette.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+#imgauto {
+  width: 200px;
+  height: 180px;
+  margin: 20px;
+}
+
+#imgusuario {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
 #ladoizquierdo {
   position: relative;
-  margin: auto;
-  
+  margin: 8px;
+}
+
+#centrando {
+  margin: 25px 0px;
 }
 
 #ladoderecho {

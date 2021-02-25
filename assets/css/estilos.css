@@ -13,6 +13,31 @@
     margin-left: 28%;   
 }
 
+table {
+  margin: 60px auto;
+  width: 90%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+  text-align: center;
+}
+#t01 tr:nth-child(odd) {
+ background-color: #fff;
+ text-align: center;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+
 #backgroundAuto {
   background-image: url("../img/Corvette.jpg");
   background-repeat: no-repeat;
@@ -21,6 +46,17 @@
   position: relative;
   width: auto;
   height: auto;
+}
+
+#clientes {
+  
+  margin: 50px;
+  color: white;
+  font-size: 50px;
+  position: relative;
+  text-align: center;
+  justify-content: center center;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 #imgauto {
@@ -41,13 +77,9 @@
 }
 
 #centrando {
-  margin: 25px 0px;
+  margin: 60px 10px;
 }
 
-#ladoderecho {
-  position: relative;
-  margin: 30%;
-}
 
 #moverauto {
   margin-left: 25%;
@@ -215,4 +247,95 @@ form .error {
 }
 .demo-2 .form-search button.btn {
 padding:15px 12px;
+}
+
+/*Estilos de la galeria*/
+
+.galeria {
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria li{
+  margin: 5px;
+}
+
+img {
+  width: 800px;
+  height: 400px;
+}
+
+/*Estilos del modal*/
+
+.modal {
+  display: none;
+}
+
+.modal:target {
+  
+  display: block;
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal h3 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.imagen {
+  width: 100%;
+  height: 50%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen a {
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.imagen a:nth-child(2) {
+  margin: 0;
+  height: 100%;
+  flex-shrink: 2;
+}
+
+.imagen img {
+  width: 500px;
+  height: 100%;
+  max-width: 100%;
+  border: 7px solid #fff;
+  box-sizing: border-box;
+}
+
+.cerrar {
+  display: block;
+  background: #fff;
+  width: 25px;
+  height: 35px;
+  margin: 15px auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  padding: 5px;
+  border-radius: 50%;
+  line-height: 25px;
 }

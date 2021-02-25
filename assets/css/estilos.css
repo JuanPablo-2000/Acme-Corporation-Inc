@@ -271,6 +271,11 @@ img {
   height: 400px;
 }
 
+#imagen {
+  width: 600px;
+  height: 300px;
+}
+
 /*Estilos del modal*/
 
 .modal {
@@ -338,4 +343,8 @@ img {
   padding: 5px;
   border-radius: 50%;
   line-height: 25px;
+}
+
+#compraventa {
+  margin: 30px 30px;
 }

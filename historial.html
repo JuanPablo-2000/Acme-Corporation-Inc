@@ -1,18 +1,123 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">   
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historiales</title>    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>Historiales</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/estilos.css">
 
-     <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="assets/morrisjs/morris.css" rel="stylesheet">
+    <link href="assets/morrisjs/style.css" rel="stylesheet">
+    <!-- ICONOS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
 </head>
+
 <body>
-    
-     <!-- Bootstrap core JavaScript -->
-     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-     <script src="assets/Jquery/jquery.min.js"></script>
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div>
+                <div class="sidebar-heading">Compra - Venta Acme. </div>
+            </div>
+
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-light">Configuración</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Historiales</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Clientes</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Propietarios de Vehículos</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Precios de compra y venta</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Fechas de publicación</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg bg-light border-bottom table-hover">
+                <button class="btn btn-primary" id="menu-toggle">Menu</button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0" id="ladoizquierdo">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Información</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ayuda</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <div id="ladoizquierdo">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" id="ladoizquierdo" type="search" placeholder="Buscador"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>               
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card oh">
+                        <div class="card-body">
+                            <div class="d-flex m-b-30 align-items-center no-block">
+                                <h5 class="card-title ">Yearly Sales</h5>
+                                <div class="ml-auto">
+                                    <ul class="list-inline font-12">
+                                        <li><i class="fa fa-circle text-info"></i> Compras</li>
+                                        <li><i class="fa fa-circle text-primary"></i> Ventas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="morris-area-chart" style="height: 350px;"></div>
+                        </div>
+                        <div class="card-body bg-light">
+                            <div class="row text-center m-b-20">
+                                <div class="col-lg-4 col-md-4 m-t-20">
+                                    <h2 class="m-b-0 font-light">6000</h2><span class="text-muted">Total</span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 m-t-20">
+                                    <h2 class="m-b-0 font-light">4000</h2><span class="text-muted">Compras</span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 m-t-20">
+                                    <h2 class="m-b-0 font-light">2000</h2><span class="text-muted">Ventas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="container-fluid">
+                <div id="ladoizquierdo">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" id="ladoizquierdo" type="search" placeholder="Fecha Inicio"
+                            aria-label="Search">
+                        <input class="form-control mr-sm-2" id="ladoizquierdo" type="search" placeholder="Fecha Final"
+                            aria-label="Search">                            
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>               
+            </div>
+
+            <!-- Bootstrap core JavaScript -->
+            <script src="assets/Jquery/jquery.min.js"></script>   
+            <script src="/assets/morrisjs/raphael-min.js"></script>                                 
+            <script src="/assets/morrisjs/morris.min.js"></script>
+            <script src="/assets/Jquery/dashboard1.js"></script>
+            
 </body>
+
 </html>
